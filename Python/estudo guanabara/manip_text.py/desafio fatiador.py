@@ -1,0 +1,5 @@
+nome = input('Digite seu nome: ')
+print(f'O seu nome em maiúsculo é: {nome.upper()}.')
+print(f'O seu nome em minúsculo é: {nome.lower()}.')
+print(f'Se trata de apenas {nome.count(nome)} palavra.')
+print(f'Possui {len(nome.replace(" ", ""))} letras no total.')

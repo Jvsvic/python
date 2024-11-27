@@ -1,0 +1,1 @@
+print('Informe a temperatura em C')
