@@ -4,5 +4,8 @@ medias = [9.0, 7.3, 5.8, 6.7, 8.5]
 
 
 situacao = [(nome[0], 'Aprovado' if media >= 6 else 'Reprovado') for nome, media in zip(nomes,medias)]
-
+cadastro = [x for x in [nomes,situacao]]
 print(situacao)
+print(cadastro)
+lista = [nomes, notas, medias, situacao]
+print(lista)

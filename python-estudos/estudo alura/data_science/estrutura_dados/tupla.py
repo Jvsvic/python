@@ -12,4 +12,4 @@ dados_notas = []
 for i in range(0, len(notas), 3):
     dados_notas.append([notas[i], notas[i+1], notas[i+2]])
 print("Notas agrupadas:", dados_notas)
-dados_notas[0][2]
+print(dados_notas[0][2])
