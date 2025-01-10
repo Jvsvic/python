@@ -67,9 +67,23 @@ a = (n*np.sum(X*Y) - np.sum(X)*np.sum(Y))/(n*np.sum(X**2) - np.sum(X)**2)
 b = np.mean(Y) - a*np.mean(X)
 #print(b)
 y = a*X+b
-print(np.linalg.norm(Moscow-y))
+#print(np.linalg.norm(Moscow-y))
 plt.plot(datas,Moscow)
 plt.plot(X,y)
 plt.plot(41.5,41.5*a+b,'*r')
 plt.plot(100,100*a+b,'*r')
-plt.show()
+#plt.show()
+
+int = np.random.randint(low=40, high=100, size=100)
+coef = np.random.uniform(low=0.10, high=0.90, size=100)
+norma2 = np.array([])
+for i in range(100):
+    norma2 = np.append(norma2, np.linalg.norm(Moscow-(coef[i]*X+b)))
+
+#print(np.random.seed(84))
+np.random.uniform(low=0.10, high=0.90, size=100)
+#print(coef)
+
+dados = np.column_stack([norma2, coef])
+print(dados.shape)
+np.savetxt('dados.csv', dados, delimiter=',' )

@@ -47,3 +47,19 @@ plt.plot(toranja,ytoranja, linestyle='dashed', color='yellow', label='linha_tora
 #plt.plot(laranja, y_laranja, linestyle= 'dashed', color='yellow', label='linha')
 plt.legend()
 plt.show()
+
+## -----------ULTIMA AULA
+
+np.random.seed(1)
+bc = 17
+norma_laranja = np.array([])
+norma_toranja = np.array([])
+coef = np.random.uniform(low=0, high=30, size=100)
+for i in range(100):
+    norma_laranja = np.append(norma_laranja, np.linalg.norm(y_laranja - (coef[i]*x + bc)))
+    norma_toranja = np.append(norma_toranja, np.linalg.norm(y_toranja - (coef[i]*x_toranja + bc)))
+
+minimo_laranja = np.argmin(norma_laranja)
+minimo_toranja = np.argmin(norma_toranja)
+
+print(f'O minimo das laranjas é {minimo_laranja} e o minimo das toranjas é {minimo_toranja}')
