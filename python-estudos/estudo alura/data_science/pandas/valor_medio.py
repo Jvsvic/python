@@ -22,7 +22,7 @@ dados = pd.read_csv(url, sep=';')
 # Este comando (comentado) exibe o gráfico dos valores médios por tipo de imóvel.
 
 # Exibe os tipos únicos de imóveis no DataFrame.
-print(dados.Tipo.unique())
+#print(dados.Tipo.unique())
 
 # Lista de tipos de imóveis comerciais.
 imoveis_comerciais = ['Conjunto Comercial/Sala', 'Prédio Inteiro', 'Loja/Salão', 
@@ -62,7 +62,7 @@ df_percentual.rename(columns={'proportion': 'Percentuais'}, inplace=True)
 df = df.query('Tipo == "Apartamento"')
 
 # Exibe as primeiras 5 linhas do DataFrame filtrado.
-print(df.head())
+#print(df.head())
 
 # Calcula o percentual de imóveis do tipo 'Apartamento'.
 df_percentual_tipo = df['Tipo'].value_counts(normalize=True).to_frame().sort_values('proportion')
